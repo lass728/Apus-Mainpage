@@ -1,9 +1,22 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
 body {
     color: #edf3e4;
     background-color: #292b28;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
 }
 
 ul {
@@ -128,14 +141,19 @@ footer .link p {
 }
 
 .image-row {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 100%;
+    max-width: 100%;*/
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,30%);
+    gap: 3%;
+   
 }
 
 .image-container {
-    width: 32%; /* Isso permite até três imagens em uma linha */
+    /*width: 32%;  Isso permite até três imagens em uma linha */
     margin-bottom: 1%;
     position: relative;
 }
@@ -170,4 +188,23 @@ footer .link p {
 }
 .faq-table td {
     background-color: #535d4c;
+}
+
+@media only screen and (max-width: 600px)
+{
+  main
+  {
+    width: 100%;
+  }
+
+  .image-row
+  {
+    grid-template-columns: 100%;
+  }
+
+  footer
+  {
+    margin-top: 240px;
+    flex-direction: column;
+  }
 }
